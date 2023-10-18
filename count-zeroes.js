@@ -9,9 +9,9 @@ function countZeroes(arr) {
 function findFirst(arr, low = 0, high = arr.length - 1) {
   if (high >= low) {
     let middle = low + Math.floor((high - low) / 2);
-    if ((middle == 0 || arr[mid - 1] === 1) && arr[middle] === 0) {
+    if ((middle == 0 || arr[middle - 1] === 1) && arr[middle] === 0) {
       return middle;
-    } else if (arr[mid] === 1) {
+    } else if (arr[middle] === 1) {
       return findFirst(arr, middle + 1, high);
     }
     return findFirst(arr, low, middle - 1);
